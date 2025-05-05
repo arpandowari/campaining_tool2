@@ -7,11 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-emerald-100: oklch(95% 0.052 163.051);
-    --color-emerald-200: oklch(90.5% 0.093 164.15);
-    --color-emerald-600: oklch(59.6% 0.145 163.225);
-    --color-emerald-700: oklch(50.8% 0.118 165.612);
-    --color-emerald-800: oklch(43.2% 0.095 166.913);
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-teal-800: oklch(43.7% 0.078 188.216);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
@@ -419,9 +415,6 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
@@ -472,9 +465,6 @@
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
-  }
-  .w-15 {
-    width: calc(var(--spacing) * 15);
   }
   .w-36 {
     width: calc(var(--spacing) * 36);
@@ -551,8 +541,14 @@
   .max-w-6xl {
     max-width: var(--container-6xl);
   }
+  .max-w-md {
+    max-width: var(--container-md);
+  }
   .max-w-xs {
     max-width: var(--container-xs);
+  }
+  .min-w-full {
+    min-width: 100%;
   }
   .flex-1 {
     flex: 1;
@@ -599,6 +595,9 @@
   }
   .flex-wrap {
     flex-wrap: wrap;
+  }
+  .place-items-center {
+    place-items: center;
   }
   .items-center {
     align-items: center;
@@ -735,9 +734,6 @@
   .border-black {
     border-color: var(--color-black);
   }
-  .border-emerald-700 {
-    border-color: var(--color-emerald-700);
-  }
   .border-gray-100 {
     border-color: var(--color-gray-100);
   }
@@ -771,21 +767,6 @@
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-emerald-100 {
-    background-color: var(--color-emerald-100);
-  }
-  .bg-emerald-200 {
-    background-color: var(--color-emerald-200);
-  }
-  .bg-emerald-600 {
-    background-color: var(--color-emerald-600);
-  }
-  .bg-emerald-700 {
-    background-color: var(--color-emerald-700);
-  }
-  .bg-emerald-800 {
-    background-color: var(--color-emerald-800);
-  }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
   }
@@ -805,9 +786,6 @@
   .bg-gradient-to-t {
     --tw-gradient-position: to top in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-  .bg-\[conic-gradient\(at_top_left\,_var\(--tw-gradient-stops\)\)\] {
-    background-image: conic-gradient(at top left, var(--tw-gradient-stops));
   }
   .bg-\[linear-gradient\(to_right\,_\#4b4a4a\,_\#000000\,_\#4b4a4a\)\] {
     background-image: linear-gradient(to right, #4b4a4a, #000000, #4b4a4a);
@@ -1083,6 +1061,9 @@
   .text-\[\#0b7a6f\] {
     color: #0b7a6f;
   }
+  .text-\[\#000\] {
+    color: #000;
+  }
   .text-\[\#1fffa3\] {
     color: #1fffa3;
   }
@@ -1092,26 +1073,20 @@
   .text-\[\#075E54\] {
     color: #075E54;
   }
+  .text-\[\#a7d4cf\] {
+    color: #a7d4cf;
+  }
   .text-\[\#b2e5d6\] {
     color: #b2e5d6;
+  }
+  .text-\[\#c5e0dd\] {
+    color: #c5e0dd;
   }
   .text-\[\#ffb085\] {
     color: #ffb085;
   }
   .text-black {
     color: var(--color-black);
-  }
-  .text-emerald-100 {
-    color: var(--color-emerald-100);
-  }
-  .text-emerald-200 {
-    color: var(--color-emerald-200);
-  }
-  .text-emerald-700 {
-    color: var(--color-emerald-700);
-  }
-  .text-emerald-800 {
-    color: var(--color-emerald-800);
   }
   .text-gray-500 {
     color: var(--color-gray-500);
@@ -1124,6 +1099,9 @@
   }
   .text-gray-900 {
     color: var(--color-gray-900);
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-white {
     color: var(--color-white);
@@ -1190,13 +1168,6 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
-  .group-hover\:block {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        display: block;
-      }
-    }
-  }
   .hover\:bg-\[\#0b7a6f\] {
     &:hover {
       @media (hover: hover) {
@@ -1204,17 +1175,10 @@
       }
     }
   }
-  .hover\:bg-emerald-100 {
+  .hover\:bg-\[\#064e49\] {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-emerald-100);
-      }
-    }
-  }
-  .hover\:bg-emerald-800 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-emerald-800);
+        background-color: #064e49;
       }
     }
   }
@@ -1380,6 +1344,16 @@
   .md\:max-w-md {
     @media (width >= 48rem) {
       max-width: var(--container-md);
+    }
+  }
+  .md\:grid-cols-1 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .md\:grid-cols-3 {

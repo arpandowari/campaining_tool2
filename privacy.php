@@ -13,11 +13,11 @@
 
 <body>
     <?php
-    include("nevbar.php")
+    include("nevbar.php")   
     ?>
     <section>
         <div class="relative  h-[450px] w-full bg-gradient-to-r from-[#075E54] to-[#5B9C94]">
-            <img src="image/section-break.png" alt="" class="z-20 absolute  bottom-[-2px] left-0 w-[100%]">
+            <img src="image/section-break.png" alt="kj" class="z-20 absolute  bottom-[-2px] left-0 w-[100%]">
             <!-- <img src="image/  bgdesignblack.png" alt="" class="z-20 absolute  bottom-[-2px] left-0 w-[100%]"> -->
           
             <div class=" ">

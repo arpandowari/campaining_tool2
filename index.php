@@ -235,7 +235,7 @@
         </p>
         <p class="text-[13px] font-[300] md:mt-2">"Schedule" → "Conditions" → "Send message"</p>
         <div class="center w-full flex justify-center mt-3 lg:mt-2">
-          <span class="border-2 rounded-3xl px-5 py-0.5 text-[15px] ">Campaigning Tool</span>
+          <span class="border-2 rounded-3xl px-5 py-0.5 text-[15px] text-black ">Campaigning Tool</span>
         </div>
         <div class="absolute -bottom-32 right-0 sm:top-12 w-full xl:top-3 overflow-hidden">
           <img src="./assets/img/glove.svg" alt="" class="w-full">
